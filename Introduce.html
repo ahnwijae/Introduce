@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Introduce</title>
+    <title>자기소개서</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,6 +15,26 @@
             width: 80%;
             margin: 0 auto;
             padding: 20px;
+            padding-top: 70px; /* To ensure content is not hidden behind the fixed navbar */
+        }
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            background-color: #575757;
         }
         .profile {
             display: flex;
@@ -48,9 +68,17 @@
     </style>
 </head>
 <body>
+    <!-- 네비게이션 바 -->
+    <div class="navbar">
+        <a href="#profile">프로필</a>
+        <a href="#resume">이력서</a>
+        <a href="#self-intro">자기소개서</a>
+        <a href="#portfolio">포트폴리오</a>
+    </div>
+
     <div class="container">
-        <!-- 증명사진과 간단한 정보 -->
-        <div class="profile">
+        <!-- 프로필 섹션 -->
+        <div id="profile" class="section profile">
             <img src="your-photo.jpg" alt="증명사진">
             <div class="profile-info">
                 <h1>홍길동</h1>
@@ -61,19 +89,19 @@
         </div>
 
         <!-- 이력서 섹션 -->
-        <div class="section">
+        <div id="resume" class="section">
             <h2>이력서</h2>
             <p>여기에 이력서 내용을 작성하세요.</p>
         </div>
 
         <!-- 자기소개서 섹션 -->
-        <div class="section">
+        <div id="self-intro" class="section">
             <h2>자기소개서</h2>
             <p>여기에 자기소개서 내용을 작성하세요.</p>
         </div>
 
         <!-- 포트폴리오 섹션 -->
-        <div class="section">
+        <div id="portfolio" class="section">
             <h2>포트폴리오</h2>
             <p>여기에 포트폴리오 내용을 작성하세요.</p>
         </div>
