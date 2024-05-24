@@ -22,46 +22,46 @@
 </head>
 <body class="font-sans bg-gray-100">
     <!-- 네비게이션 바 -->
-    <nav class="fixed top-0 w-full bg-gray-800 text-white text-center py-4 z-50">
-        <a href="#profile" class="mx-2 px-4 py-2 hover:bg-gray-700 rounded">프로필</a>
-        <a href="#resume" class="mx-2 px-4 py-2 hover:bg-gray-700 rounded">이력서</a>
-        <a href="#self-intro" class="mx-2 px-4 py-2 hover:bg-gray-700 rounded">자기소개서</a>
-        <a href="#portfolio" class="mx-2 px-4 py-2 hover:bg-gray-700 rounded">포트폴리오</a>
+    <nav class="fixed top-0 w-full bg-blue-200 text-blue-800 text-center py-4 z-50">
+        <a href="#profile" class="mx-2 px-4 py-2 hover:bg-blue-300 rounded">프로필</a>
+        <a href="#resume" class="mx-2 px-4 py-2 hover:bg-blue-300 rounded">이력서</a>
+        <a href="#self-intro" class="mx-2 px-4 py-2 hover:bg-blue-300 rounded">자기소개서</a>
+        <a href="#portfolio" class="mx-2 px-4 py-2 hover:bg-blue-300 rounded">포트폴리오</a>
     </nav>
 
     <div class="container mx-auto mt-16 p-4">
         <!-- 프로필 섹션 -->
-        <section id="profile" class="bg-white p-6 rounded-lg shadow mb-8 flex items-center">
-            <img src="your-photo.jpg" alt="증명사진" class="rounded-full w-32 h-32 object-cover mr-6">
+        <section id="profile" class="bg-white p-6 rounded-lg shadow mb-8 flex items-center flex-wrap">
+            <img src="your-photo.jpg" alt="증명사진" class="rounded-full w-32 h-32 object-cover mr-6 mb-4 sm:mb-0">
             <div>
-                <h1 class="text-2xl font-bold">홍길동</h1>
-                <p class="mt-2">이메일: example@example.com</p>
-                <p>전화번호: 010-1234-5678</p>
-                <p>주소: 서울특별시 강남구</p>
+                <h1 class="text-2xl font-bold sm:text-xl">홍길동</h1>
+                <p class="mt-2 sm:text-sm">이메일: example@example.com</p>
+                <p class="sm:text-sm">전화번호: 010-1234-5678</p>
+                <p class="sm:text-sm">주소: 서울특별시 강남구</p>
             </div>
         </section>
 
         <!-- 이력서 섹션 -->
         <section id="resume" class="bg-white p-6 rounded-lg shadow mb-8">
-            <h2 class="text-xl font-semibold mb-4">이력서</h2>
-            <p>여기에 이력서 내용을 작성하세요.</p>
+            <h2 class="text-xl font-semibold mb-4 sm:text-lg">이력서</h2>
+            <p class="sm:text-sm">여기에 이력서 내용을 작성하세요.</p>
         </section>
 
         <!-- 자기소개서 섹션 -->
         <section id="self-intro" class="bg-white p-6 rounded-lg shadow mb-8">
-            <h2 class="text-xl font-semibold mb-4">자기소개서</h2>
-            <p>여기에 자기소개서 내용을 작성하세요.</p>
+            <h2 class="text-xl font-semibold mb-4 sm:text-lg">자기소개서</h2>
+            <p class="sm:text-sm">여기에 자기소개서 내용을 작성하세요.</p>
         </section>
 
         <!-- 포트폴리오 섹션 -->
         <section id="portfolio" class="bg-white p-6 rounded-lg shadow mb-8">
-            <h2 class="text-xl font-semibold mb-4">포트폴리오</h2>
-            <p>여기에 포트폴리오 내용을 작성하세요.</p>
+            <h2 class="text-xl font-semibold mb-4 sm:text-lg">포트폴리오</h2>
+            <p class="sm:text-sm">여기에 포트폴리오 내용을 작성하세요.</p>
         </section>
     </div>
 
     <!-- 위로 가기 버튼 -->
-    <button id="topBtn" class="fixed-button bg-gray-800 text-white py-2 px-4 rounded shadow-lg">위로 가기</button>
+    <button id="topBtn" class="fixed-button bg-blue-200 text-blue-800 py-2 px-4 rounded shadow-lg hover:bg-blue-300">위로 가기</button>
 
     <script>
         // Get the button
