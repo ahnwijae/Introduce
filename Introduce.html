@@ -65,6 +65,23 @@
         .section h2 {
             margin-top: 0;
         }
+        .top-button {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            z-index: 1000;
+        }
+        .top-button:hover {
+            background-color: #575757;
+        }
     </style>
 </head>
 <body>
@@ -106,5 +123,28 @@
             <p>여기에 포트폴리오 내용을 작성하세요.</p>
         </div>
     </div>
+
+    <!-- 위로 가기 버튼 -->
+    <button class="top-button" id="topBtn">위로 가기</button>
+
+    <script>
+        // Get the button
+        let topBtn = document.getElementById("topBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        // When the user clicks on the button, scroll to the top of the document
+        topBtn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+    </script>
 </body>
 </html>
