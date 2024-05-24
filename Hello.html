@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개서</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            line-height: 1.6;
+        }
+        /* Custom styles for fixed top button */
+        .fixed-button {
+            display: none;
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body class="font-sans bg-gray-100">
+    <!-- 네비게이션 바 -->
+    <nav class="fixed top-0 w-full bg-gray-800 text-white text-center py-4 z-50">
+        <a href="#profile" class="mx-2 px-4 py-2 hover:bg-gray-700 rounded">프로필</a>
+        <a href="#resume" class="mx-2 px-4 py-2 hover:bg-gray-700 rounded">이력서</a>
+        <a href="#self-intro" class="mx-2 px-4 py-2 hover:bg-gray-700 rounded">자기소개서</a>
+        <a href="#portfolio" class="mx-2 px-4 py-2 hover:bg-gray-700 rounded">포트폴리오</a>
+    </nav>
+
+    <div class="container mx-auto mt-16 p-4">
+        <!-- 프로필 섹션 -->
+        <section id="profile" class="bg-white p-6 rounded-lg shadow mb-8 flex items-center">
+            <img src="your-photo.jpg" alt="증명사진" class="rounded-full w-32 h-32 object-cover mr-6">
+            <div>
+                <h1 class="text-2xl font-bold">홍길동</h1>
+                <p class="mt-2">이메일: example@example.com</p>
+                <p>전화번호: 010-1234-5678</p>
+                <p>주소: 서울특별시 강남구</p>
+            </div>
+        </section>
+
+        <!-- 이력서 섹션 -->
+        <section id="resume" class="bg-white p-6 rounded-lg shadow mb-8">
+            <h2 class="text-xl font-semibold mb-4">이력서</h2>
+            <p>여기에 이력서 내용을 작성하세요.</p>
+        </section>
+
+        <!-- 자기소개서 섹션 -->
+        <section id="self-intro" class="bg-white p-6 rounded-lg shadow mb-8">
+            <h2 class="text-xl font-semibold mb-4">자기소개서</h2>
+            <p>여기에 자기소개서 내용을 작성하세요.</p>
+        </section>
+
+        <!-- 포트폴리오 섹션 -->
+        <section id="portfolio" class="bg-white p-6 rounded-lg shadow mb-8">
+            <h2 class="text-xl font-semibold mb-4">포트폴리오</h2>
+            <p>여기에 포트폴리오 내용을 작성하세요.</p>
+        </section>
+    </div>
+
+    <!-- 위로 가기 버튼 -->
+    <button id="topBtn" class="fixed-button bg-gray-800 text-white py-2 px-4 rounded shadow-lg">위로 가기</button>
+
+    <script>
+        // Get the button
+        let topBtn = document.getElementById("topBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                topBtn.style.display = "block";
+            } else {
+                topBtn.style.display = "none";
+            }
+        };
+
+        // When the user clicks on the button, scroll to the top of the document
+        topBtn.onclick = function() {
+            document.body.scrollTop = 0; // For Safari
+            document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+        };
+    </script>
+</body>
+</html>
